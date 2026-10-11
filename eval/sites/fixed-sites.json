@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "note": "latitude/longitude are the 0.1-degree weather-query grid centre (weatherQueryPoint), not the exact shooting position. Sun events are computed at the grid centre, at most about 7 km from the real site: a seconds-level engineering approximation. The exact position is private and must not be written here.",
+  "sites": [
+    { "siteId": "site-a", "name": "固定机位 A", "timezone": "Asia/Shanghai", "requestPoint": { "latitude": 23.35, "longitude": 116.75 } }
+  ]
+}

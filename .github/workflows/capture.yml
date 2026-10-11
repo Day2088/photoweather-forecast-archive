@@ -1,0 +1,44 @@
+name: Capture forecast archive
+on:
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: forecast-archive
+  cancel-in-progress: false
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24.19.0
+      - run: npm install --global pnpm@11.19.0 --ignore-scripts
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: Capture due forecasts
+        run: pnpm capture
+      - name: Commit new archive files
+        id: commit
+        if: always()
+        run: |
+          if [ ! -d eval/archive ]; then echo "no new archive files"; exit 0; fi
+          git add eval/archive
+          if git diff --cached --quiet; then echo "no new archive files"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(archive): capture as-published forecasts"
+          for attempt in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            echo "push attempt $attempt failed"; git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 10))
+          done
+          exit 1
+      # actions/upload-artifact v4, same pinned SHA as the main project's quality workflow. Lets a person commit the files by hand if every push failed.
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always() && steps.commit.outcome == 'failure'
+        with:
+          name: unpushed-forecast-archive
+          path: eval/archive
