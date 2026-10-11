@@ -1,7 +1,7 @@
 name: Capture forecast archive
 on:
   schedule:
-    - cron: '23 * * * *'
+    - cron: '7,27,47 * * * *'
   workflow_dispatch:
 permissions:
   contents: write
