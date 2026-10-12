@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "site-a-sunrise-20261014T2210Z-three-day",
+  "rawFile": "eval/archive/site-a/sunrise-20261014T2210Z/three-day-2026-10-12T02-27-44.377Z.json",
+  "sha256": "a865a705be6194c00ac1a31c5b64f710df2c8b0b78c5859ac027d3202d65563c",
+  "requestUrl": "https://api.open-meteo.com/v1/forecast?latitude=23.35&longitude=116.75&hourly=temperature_2m%2Capparent_temperature%2Cdew_point_2m%2Crelative_humidity_2m%2Ccloud_cover%2Ccloud_cover_low%2Ccloud_cover_mid%2Ccloud_cover_high%2Cprecipitation%2Cprecipitation_probability%2Cvisibility%2Cwind_speed_10m%2Cwind_direction_10m%2Cwind_gusts_10m%2Cweather_code&models=gfs_global&forecast_days=7&timezone=auto&timeformat=unixtime&wind_speed_unit=ms&temperature_unit=celsius&precipitation_unit=mm",
+  "source": {
+    "id": "open-meteo-gfs",
+    "provider": "Open-Meteo",
+    "endpointId": "forecast-v1",
+    "model": "gfs_global",
+    "kind": "operational-forecast",
+    "runInitializedAtUtc": null,
+    "availableAtUtc": null,
+    "retrievedAtUtc": "2026-10-12T02:27:44.377Z",
+    "publicationEvidence": "captured-live",
+    "attribution": "Weather data by Open-Meteo / NOAA GFS · CC-BY 4.0；本应用组织字段并展示数据。"
+  },
+  "sourceEvidenceRef": "captured-live by scripts/capture-forecast-archive.mjs; retrievedAtUtc=2026-10-12T02:27:44.377Z; HTTP Date header=Mon, 12 Oct 2026 02:27:44 GMT; model run time not provided by the response, left null."
+}
