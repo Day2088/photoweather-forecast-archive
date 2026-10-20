@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "site-a-sunset-20261020T0943Z-near-path",
+  "rawFile": "eval/archive/site-a/sunset-20261020T0943Z/near-2026-10-20T07-47-24.571Z.path.json",
+  "sha256": "1dd9506537bb8ebbf2eb6a4056bdb976e17cc716313c5d0b2f95b7a9b544ebb4",
+  "requestUrl": "https://api.open-meteo.com/v1/forecast?latitude=23.35%2C23.25%2C23.15%2C23.05%2C22.95%2C22.95%2C22.85%2C22.75%2C22.65&longitude=116.75%2C116.25%2C115.75%2C115.35%2C114.85%2C114.35%2C113.85%2C113.45%2C112.95&hourly=cloud_cover_low%2Ccloud_cover_mid%2Ccloud_cover_high&models=gfs_global&forecast_days=7&timezone=GMT&timeformat=unixtime",
+  "source": {
+    "id": "open-meteo-gfs",
+    "provider": "Open-Meteo",
+    "endpointId": "forecast-v1",
+    "model": "gfs_global",
+    "kind": "operational-forecast",
+    "runInitializedAtUtc": null,
+    "availableAtUtc": null,
+    "retrievedAtUtc": "2026-10-20T07:47:25.734Z",
+    "publicationEvidence": "captured-live",
+    "attribution": "Weather data by Open-Meteo / NOAA GFS · CC-BY 4.0；本应用组织字段并展示数据。"
+  },
+  "sourceEvidenceRef": "captured-live by scripts/capture-forecast-archive.mjs; contract=open-meteo-gfs-clouds-gmt/1; retrievedAtUtc=2026-10-20T07:47:25.734Z; HTTP Date header=Tue, 20 Oct 2026 07:47:25 GMT; model run time not provided by the response, left null."
+}
