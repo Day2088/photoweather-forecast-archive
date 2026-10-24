@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "contract": "open-meteo-gfs-clouds-gmt/1",
+  "forecastDays": 7,
+  "plannedEvent": {
+    "eventType": "sunrise",
+    "eventAtUtc": "2026-10-26T22:15:29.855Z",
+    "siteId": "site-a"
+  },
+  "eventTimeBasis": "grid-centre",
+  "gridCentreEventAtUtc": "2026-10-26T22:15:29.855Z",
+  "solarAzimuthDegTrueNorth": 103.47063557735193,
+  "pathAlgorithm": {
+    "sunwardPathVersion": "0.0.1",
+    "geometry": {
+      "crs": "WGS-84",
+      "method": "surface-geodesic",
+      "engine": "GeographicLib",
+      "engineVersion": "2.2.0"
+    },
+    "calibrationStatus": "uncalibrated"
+  },
+  "distancesM": [
+    50000,
+    100000,
+    150000,
+    200000,
+    250000,
+    300000,
+    350000,
+    400000
+  ],
+  "origin": {
+    "requestedPoint": {
+      "latitude": 23.35,
+      "longitude": 116.75
+    },
+    "queryIndex": 0
+  },
+  "samples": [
+    {
+      "distanceM": 50000,
+      "requestedPoint": {
+        "latitude": 23.25,
+        "longitude": 117.25
+      },
+      "queryIndex": 1
+    },
+    {
+      "distanceM": 100000,
+      "requestedPoint": {
+        "latitude": 23.15,
+        "longitude": 117.65
+      },
+      "queryIndex": 2
+    },
+    {
+      "distanceM": 150000,
+      "requestedPoint": {
+        "latitude": 23.05,
+        "longitude": 118.15
+      },
+      "queryIndex": 3
+    },
+    {
+      "distanceM": 200000,
+      "requestedPoint": {
+        "latitude": 22.95,
+        "longitude": 118.65
+      },
+      "queryIndex": 4
+    },
+    {
+      "distanceM": 250000,
+      "requestedPoint": {
+        "latitude": 22.85,
+        "longitude": 119.15
+      },
+      "queryIndex": 5
+    },
+    {
+      "distanceM": 300000,
+      "requestedPoint": {
+        "latitude": 22.65,
+        "longitude": 119.55
+      },
+      "queryIndex": 6
+    },
+    {
+      "distanceM": 350000,
+      "requestedPoint": {
+        "latitude": 22.55,
+        "longitude": 120.05
+      },
+      "queryIndex": 7
+    },
+    {
+      "distanceM": 400000,
+      "requestedPoint": {
+        "latitude": 22.45,
+        "longitude": 120.55
+      },
+      "queryIndex": 8
+    }
+  ],
+  "queryPoints": [
+    {
+      "latitude": 23.35,
+      "longitude": 116.75
+    },
+    {
+      "latitude": 23.25,
+      "longitude": 117.25
+    },
+    {
+      "latitude": 23.15,
+      "longitude": 117.65
+    },
+    {
+      "latitude": 23.05,
+      "longitude": 118.15
+    },
+    {
+      "latitude": 22.95,
+      "longitude": 118.65
+    },
+    {
+      "latitude": 22.85,
+      "longitude": 119.15
+    },
+    {
+      "latitude": 22.65,
+      "longitude": 119.55
+    },
+    {
+      "latitude": 22.55,
+      "longitude": 120.05
+    },
+    {
+      "latitude": 22.45,
+      "longitude": 120.55
+    }
+  ],
+  "inputQueryIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "retrieval": {
+    "singleRetrievedAtUtc": "2026-10-24T02:27:21.664Z",
+    "pathRetrievedAtUtc": "2026-10-24T02:27:22.809Z",
+    "gapSeconds": 1.145
+  },
+  "localWeather": {
+    "singleRequestPoint": {
+      "latitude": 23.35,
+      "longitude": 116.75
+    },
+    "pathOriginRequestPoint": {
+      "latitude": 23.35,
+      "longitude": 116.75
+    },
+    "sameGrid": true,
+    "singleRequestHasLocalVariables": true
+  },
+  "note": "All points are 0.1-degree query cells derived from the grid centre, not the exact site. Replay: local weather from the single-point raw; path cloud from this batch."
+}
