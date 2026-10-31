@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "plannedEvent": {
+    "eventType": "sunrise",
+    "eventAtUtc": "2026-11-02T22:19:17.709Z",
+    "siteId": "site-a"
+  },
+  "note": "Event time computed at the weather grid centre, not the exact site; match registry events within 120 s."
+}
